@@ -1,0 +1,9 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
+/* Root Variables */
+:root {
+    --font-family: 'Aboreto', cursive;
+    --max-width: 1200px;
+}
