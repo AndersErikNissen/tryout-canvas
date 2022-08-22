@@ -6,4 +6,5 @@
 :root {
     --font-family: 'Aboreto', cursive;
     --max-width: 1200px;
+    --border-width: 2px;
 }
