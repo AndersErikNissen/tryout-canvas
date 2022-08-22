@@ -57,25 +57,30 @@ ctx.stroke();
 /**
  * Canvas Zero - Corner
  */
- const canvasCorner = document.querySelector( '#canvas_zero--corner' );
- const ctxCorner = canvasCorner.getContext( '2d' );
- 
- ctxCorner.strokeStyle = 'black';
- ctxCorner.lineWidth = borderWidth;
+const allCorners = document.querySelectorAll( '.canvas_zero--corner' );
 
-ctxCorner.beginPath();
-ctxCorner.moveTo( 50, 0 );
-ctxCorner.lineTo( 50, 30 );
-ctxCorner.lineTo( 60, 30 );
-ctxCorner.lineTo( 60, 20 );
-ctxCorner.lineTo( 40, 20 );
-ctxCorner.lineTo( 40, 60 );
-ctxCorner.lineTo( 60, 60 );
-ctxCorner.lineTo( 60, 40 );
-ctxCorner.lineTo( 20, 40 );
-ctxCorner.lineTo( 20, 60 );
-ctxCorner.lineTo( 30, 60 );
-ctxCorner.lineTo( 30, 50 );
-ctxCorner.lineTo( 0, 50 );
+allCorners.forEach( corner => {
 
-ctxCorner.stroke();
+    let ctxCorner = corner.getContext( '2d' );
+    
+    ctxCorner.strokeStyle = 'black';
+    ctxCorner.lineWidth = borderWidth;
+    
+    ctxCorner.beginPath();
+    ctxCorner.moveTo( 50, 0 );
+    ctxCorner.lineTo( 50, 30 );
+    ctxCorner.lineTo( 60, 30 );
+    ctxCorner.lineTo( 60, 20 );
+    ctxCorner.lineTo( 40, 20 );
+    ctxCorner.lineTo( 40, 60 );
+    ctxCorner.lineTo( 60, 60 );
+    ctxCorner.lineTo( 60, 40 );
+    ctxCorner.lineTo( 20, 40 );
+    ctxCorner.lineTo( 20, 60 );
+    ctxCorner.lineTo( 30, 60 );
+    ctxCorner.lineTo( 30, 50 );
+    ctxCorner.lineTo( 0, 50 );
+    
+    ctxCorner.stroke();
+    
+} );
