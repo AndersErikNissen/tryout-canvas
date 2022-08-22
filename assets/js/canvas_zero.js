@@ -10,14 +10,15 @@ const borderWidth = getComputedStyle( document.documentElement ).getPropertyValu
 const canvasZero = document.querySelector( '#canvas_zero' );
 const ctx = canvasZero.getContext( '2d' );
 
-let currect_pencil_placement = [ 100, 50 ];
 
 ctx.strokeStyle = 'black';
 ctx.lineWidth = borderWidth;
-ctx.lineJoin = 'bevel';
+// ctx.lineJoin = 'bevel';
+
 
 // Only need to input 2 cordinates to draw 1 line.
 // When creating lines together this is the wrong approuch, this way they are not joined, and are all seperate lines... :)
+// let currect_pencil_placement = [ 100, 50 ];
 // function draw_one_line( first, second ) {
 
 //     ctx.beginPath();
@@ -53,5 +54,28 @@ ctx.lineTo( 99, 50 );
 
 ctx.stroke();
 
+/**
+ * Canvas Zero - Corner
+ */
+ const canvasCorner = document.querySelector( '#canvas_zero--corner' );
+ const ctxCorner = canvasCorner.getContext( '2d' );
+ 
+ ctxCorner.strokeStyle = 'black';
+ ctxCorner.lineWidth = borderWidth;
 
+ctxCorner.beginPath();
+ctxCorner.moveTo( 50, 0 );
+ctxCorner.lineTo( 50, 30 );
+ctxCorner.lineTo( 60, 30 );
+ctxCorner.lineTo( 60, 20 );
+ctxCorner.lineTo( 40, 20 );
+ctxCorner.lineTo( 40, 60 );
+ctxCorner.lineTo( 60, 60 );
+ctxCorner.lineTo( 60, 40 );
+ctxCorner.lineTo( 20, 40 );
+ctxCorner.lineTo( 20, 60 );
+ctxCorner.lineTo( 30, 60 );
+ctxCorner.lineTo( 30, 50 );
+ctxCorner.lineTo( 0, 50 );
 
+ctxCorner.stroke();
