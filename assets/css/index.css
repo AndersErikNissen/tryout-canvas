@@ -60,14 +60,7 @@ header {
     z-index: -1;
 }
 
-.canvas_zero--corner.corner-one {
+.canvas_zero--corner {
     top: 0;
     left: 0;
-}
-
-.canvas_zero--corner.corner-two {
-    top: unset;
-    right: 0;
-    bottom: 0;
-    margin: 0;
 }
